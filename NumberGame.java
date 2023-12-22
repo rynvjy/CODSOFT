@@ -1,0 +1,27 @@
+
+
+import java.util.Scanner;
+
+public class NumberGame {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int randomNumber = (int) (Math.random() * 100) + 1;
+
+        System.out.println("Enter the number between 1 to 100");
+
+        while (true) {
+            System.out.print("Enter your guess: ");
+            int guess = scanner.nextInt();
+
+            if (guess == randomNumber) {
+                System.out.println(" You guessed the number correctly");
+                break;
+            } else if (guess < randomNumber) {
+                System.out.println("Your guess is too lower");
+            } else {
+                System.out.println("Your guess is too higher");
+            }
+        }
+    }
+}
